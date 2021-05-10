@@ -5,7 +5,7 @@ from flask import Flask
 from apscheduler.schedulers.background import BackgroundScheduler
 import smtplib
 
-app = Flask(__name__)
+application = app = Flask(__name__)
 def callapi():
     newHeaders = {'user-agent': 'personal-trakcer', "Accept-Language": "en_US"}
     pin = '122002'
