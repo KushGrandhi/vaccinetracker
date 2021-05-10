@@ -49,12 +49,6 @@ def sendmail(message):
     s.sendmail(u_email, r_email, message)
     s.quit()
 
-
-scheduler = BackgroundScheduler()
-scheduler.add_job(func=callapi, trigger="interval", seconds=60)
-scheduler.start()
-
-
 @app.route("/")
 def index():
     r = callapi()
