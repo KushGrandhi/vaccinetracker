@@ -36,10 +36,10 @@ def callapi():
     return r
 
 def sendmail(message):
-    u_email = 'tinydeveloperkush@gmail.com'
-    u_Password = '@Kush1234'
+    u_email = '<sender email>'
+    u_Password = '<sender password>'
 
-    r_email = 'khush.grandhi@gmail.com'
+    r_email = '<reciever email>'
     #smtplib.SMTP.connect()
     s = smtplib.SMTP('smtp.gmail.com', 587)
     s.starttls()
