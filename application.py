@@ -46,7 +46,7 @@ def sendmail(message):
     u_Password = '@Kush1234'
 
     r_email = 'khush.grandhi@gmail.com'
-    SMTP.connect(587)
+    #smtplib.SMTP.connect()
     s = smtplib.SMTP('smtp.gmail.com', 587)
     s.starttls()
 
@@ -65,6 +65,11 @@ scheduler.start()
 def index():
     r = callapi()
     return r.json()
+@app.before_first_request
+def initialize():
+    scheduler = BackgroundScheduler()
+    scheduler.add_job(callapi, 'interval', seconds=120, id='my_job')
+    scheduler.start()
 
 if __name__ == '__main__': 
     app.run(debug = True) 
