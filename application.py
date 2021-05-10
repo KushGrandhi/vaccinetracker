@@ -35,12 +35,6 @@ def callapi():
         #s.sendmail(u_email, r_email, message)
     return r
 
-def testy():
-    url = 'https://cdn-api.co-vin.in/api/v2/auth/public/generateOTP'
-    j = { "mobile": "8588845818"}
-    newHeaders = {'Accept-Language': 'hi_IN'}
-    r = requests.post(url,json = j,headers = newHeaders)
-    return r
 def sendmail(message):
     u_email = 'tinydeveloperkush@gmail.com'
     u_Password = '@Kush1234'
